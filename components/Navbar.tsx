@@ -1,14 +1,17 @@
 import Link from "next/link";
 import React, { useState } from "react";
+import Darkmode from "./DarkMode";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   return (
-    <nav className="bg-white text-black dark:bg-primary font-bold border-b-black border">
-      <div className="flex z-100 p-6 justify-between">
-        <h1 className="text-xl font-mono ">Compound Calculator</h1>
+    <nav className="bg-white text-black  font-semibold dark:bg-darkPrimary border-b-black border-b dark:border-0 ">
+      <div className="flex z-100 p-6 justify-between max-w-screen-xl mx-auto">
+        <h1 className="text-xl font-mono font-bold dark:text-white">
+          My<span className="text-primary">Staff</span>.online
+        </h1>
         <div className="flex justify">
-          <div className={`hidden md:block space-x-6`}>
+          <div className={`hidden tablet:block space-x-6`}>
             <NavLinks />
           </div>
 
@@ -16,7 +19,7 @@ const Navbar = () => {
             type="button"
             aria-label="Toggle Mobile Menu"
             onClick={() => setOpen(!open)}
-            className="rounded md:hidden focus:outline-none focus:ring focus:ring-gray-500 focus:ring-opacity-50"
+            className="rounded tablet:hidden focus:outline-none focus:ring focus:ring-gray-500 focus:ring-opacity-50"
           >
             <MenuAlt4Svg menuOpen={open} />
           </button>
@@ -24,7 +27,7 @@ const Navbar = () => {
       </div>
 
       {open && (
-        <div className="p-4 flex flex-col space-y-3 md:hidden">
+        <div className="p-4 flex flex-col space-y-3 tablet:hidden">
           <NavLinks />
         </div>
       )}
@@ -53,11 +56,26 @@ const MenuAlt4Svg: React.FC<{ menuOpen: Boolean }> = ({ menuOpen }) => (
 const NavLinks = () => {
   return (
     <>
+      <Darkmode />
       <Link href="/">
-        <a className="text-[#1D1D1D] dark:text-white ">Home</a>
+        <a className="text-black dark:text-white ">Rewards</a>
       </Link>
-      <Link href="/about">
-        <a className="text-[#1D1D1D] dark:text-white ">About</a>
+      <Link href="/">
+        <a className="text-black dark:text-white ">Job Posts</a>
+      </Link>
+      <Link href="/">
+        <a className="text-black dark:text-white ">About Us</a>
+      </Link>
+      <Link href="/">
+        <a className="text-black dark:text-white ">Contact Us</a>
+      </Link>
+      <Link href="/">
+        <a className="text-black dark:text-white bg-primary p-4 rounded-md">
+          Join Us
+        </a>
+      </Link>
+      <Link href="/">
+        <a className="text-black dark:text-white ">Sign In</a>
       </Link>
     </>
   );
