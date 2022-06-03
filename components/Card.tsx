@@ -29,7 +29,7 @@ const Card = () => {
             <tbody className="hidden xs:block">
               <tr>
                 <td className="pr-2 ">Qualification</td>
-                <td className="text-light-100">Bachelor's Degree</td>
+                <td className="text-light-100">Bachelor`&apos;s Degree</td>
                 <td className="px-2">Expected Salary</td>
                 <td className="text-light-100">₱12,000 (weekly)</td>
               </tr>
@@ -51,7 +51,7 @@ const Card = () => {
             <tbody className="xs:hidden">
               <tr>
                 <td className="pr-2">Qualification</td>
-                <td className="text-light-100">Bachelor's Degree</td>
+                <td className="text-light-100">Bachelor`&apos;s Degree</td>
               </tr>
               <tr>
                 <td className="pr-2">Experience</td>

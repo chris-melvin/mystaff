@@ -109,9 +109,9 @@ const Filter = () => {
             <option value="High School">High School</option>
             <option value="Certificate">Certificate</option>
             <option value="Diploma">Diploma</option>
-            <option value="Associate's Degree">Associate's Degree</option>
-            <option value="Bachelor's Degree">Bachelor's Degree</option>
-            <option value="Master's Degree">Master's Degree</option>
+            <option value="Associate's Degree">Associate`&apos;s Degree</option>
+            <option value="Bachelor's Degree">Bachelor`&apos;s Degree</option>
+            <option value="Master's Degree">Master`&apos;s Degree</option>
             <option value="Doctorate">Doctorate Degree</option>
           </select>
         </div>
